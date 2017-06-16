@@ -47,7 +47,6 @@ main > div, main > iframe {
 	display: flex;
 	position: absolute;
   width: 100%;
-  left: 4%;
 }
 #site-header .logo {
 	flex-basis: 20%;
@@ -123,6 +122,8 @@ main > div, main > iframe {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: .6rem;
+	font-size: 1.2rem;
+  line-height: 1.2;
 }
 #services h3 {
 	font-size: 2rem;
