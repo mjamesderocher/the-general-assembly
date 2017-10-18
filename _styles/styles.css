@@ -47,10 +47,26 @@ main > div, main > iframe {
 	display: flex;
 	position: absolute;
   width: 100%;
+  justify-content: space-between;
 }
 #site-header .logo {
 	flex-basis: 20%;
 	margin: 1rem;
+}
+#site-header nav {
+	padding: 2rem;
+}
+nav ul {
+	list-style: none;
+	-webkit-padding-start: 0;
+	display: flex;
+}
+nav li:not(:first-of-type) {
+	padding-left: 1rem;
+}
+nav a {
+	color: #fff;
+	text-decoration: none;
 }
 #hero {
 	flex-basis: 100%;
@@ -139,6 +155,11 @@ main > div, main > iframe {
 	background: url('../_images/exterior.jpg');
 	background-size: cover;
 	background-position: center;
+}
+#bishops-photo {
+	background-image: url(/_images/bishops.jpg);
+	background-size: cover;
+	padding-bottom: 40%;
 }
 #bishops-list {
 	flex-basis: 66.666%;
