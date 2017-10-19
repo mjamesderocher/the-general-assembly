@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/_styles/owl.carousel.min.css">
+	<link rel="stylesheet" href="/_styles/owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="/_styles/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700" rel="stylesheet">
+	</head>
+	<body id="new-years">
+		<header id="site-header">
+			<img class="logo" src="/_images/logo.svg">
+			<nav>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/building">Building Project</a></li>
+						<li><a href="/new-years">New Year's Event</a></li>
+					</ul>
+			</nav>
+		</header>
+		<main>
+			<div id="hero">
+				<div class="overlay">
+					<p><strong>Join us for our annual New Year's Eve youth service!</strong></p>
+				</div>
+			</div>
+			<div class="carousel owl-carousel owl-theme">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-01.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-04.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-07.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-10.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-02.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-05.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-08.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-11.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-03.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-09.jpg">
+				<img class="owl-lazy" data-src="/_images/new-years/new-years-12.jpg">
+			</div>
+		</main>
+		<footer>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="/_scripts/owl.carousel.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $(".carousel").owlCarousel({
+			  	items:4,
+    			lazyLoad:true,
+    			nav:true,
+    			loop:true,
+    			autoplay:true,
+				autoplayTimeout:5000,
+				autoplayHoverPause:true
+			  });
+			});
+		</script>
+	</body>
+</html>

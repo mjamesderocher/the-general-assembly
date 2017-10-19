@@ -15,6 +15,7 @@ body {
     ), url(../_images/pixel-weave.png);*/
 	display: flex;
 	flex-wrap: wrap;
+	overflow-x: hidden;
 }
 h2 {
   text-align: center;
@@ -53,29 +54,28 @@ main > div, main > iframe {
 	flex-basis: 20%;
 	margin: 1rem;
 }
-#site-header nav {
-	padding: 2rem;
-}
-nav ul {
+#site-header ul {
 	list-style: none;
-	-webkit-padding-start: 0;
 	display: flex;
+	-webkit-padding-start: 0;
+	margin: 1rem;
 }
-nav li:not(:first-of-type) {
-	padding-left: 1rem;
+#site-header li:not(:last-of-type) {
+	padding-right: 1rem;
 }
-nav a {
-	color: #fff;
-	text-decoration: none;
+#site-header a, #site-header a:visited {
+	color: #e9e8e4;
 }
 #hero {
 	flex-basis: 100%;
 	height: 100vh;
+}
+#home #hero {
 	background: linear-gradient(
       rgba(32,152,183, .6),
       rgba(32,152,183, .6)
     ), url('../_images/hero-home.jpg');
-	background-size: cover;
+    background-size: cover;
 	background-position: center;
 }
 .overlay {
@@ -156,11 +156,6 @@ nav a {
 	background-size: cover;
 	background-position: center;
 }
-#bishops-photo {
-	background-image: url(/_images/bishops.jpg);
-	background-size: cover;
-	padding-bottom: 40%;
-}
 #bishops-list {
 	flex-basis: 66.666%;
 	background-color: #3a414c;
@@ -179,4 +174,49 @@ nav a {
 #bishops-list li:not(:first-of-type):before {
 	content: "\025AA";
   display: block;
+}
+/*New Years*/
+#new-years #hero {
+	background: linear-gradient(
+      rgba(32,152,183, .6),
+      rgba(32,152,183, .6)
+    ), url('../_images/new-years/new-years-hero.jpg');
+    background-size: cover;
+	background-position: center;
+}
+#new-years .owl-stage {
+	background-color: black;
+}
+#about #hero {
+	background: linear-gradient(
+      rgba(32,152,183, .6),
+      rgba(32,152,183, .6)
+    ), url('../_images/about/about-hero.jpg');
+    background-size: cover;
+	background-position: center;
+}
+#building #hero {
+	background: linear-gradient(
+      rgba(32,152,183, .6),
+      rgba(32,152,183, .6)
+    ), url('../_images/building/sanctuary-facing-seats.jpg');
+    background-size: cover;
+	background-position: center;
+}
+.owl-nav {
+	position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.owl-dots {
+	position: absolute;
+    bottom: 2px;
+    left: 40%;
+    width: 20%;
+}
+.owl-theme .owl-nav [class*=owl-] {
+	color: #3a414c;
+	background-color: #e9ca52;
 }
