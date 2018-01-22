@@ -203,6 +203,19 @@ main > div, main > iframe {
     background-size: cover;
 	background-position: center;
 }
+
+.store-items {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	flex-wrap: wrap;
+}
+.store-items li {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: center;
+}
 .owl-nav {
 	position: absolute;
     bottom: 0;
