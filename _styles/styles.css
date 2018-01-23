@@ -17,11 +17,14 @@ body {
 	flex-wrap: wrap;
 	overflow-x: hidden;
 }
+main {
+	overflow: hidden;
+}
 h2 {
+	border-bottom: 2px solid #3a414c;
   text-align: center;
   font-size: 2.4rem;
-  margin-top: 1rem;
-  margin-bottom: .6rem;
+  margin: 1rem 2rem .6rem;
   color: #3a414c;
 }
 button {
@@ -32,7 +35,8 @@ button {
   padding: .2rem 1rem;
   font-family: 'Vollkorn', serif;
   font-weight: bold;
-  color: #3a414c;
+	color: #3a414c;
+	margin: 1rem;
 }
 main {
 	width: 100%;
@@ -48,23 +52,77 @@ main > div, main > iframe {
 	display: flex;
 	position: absolute;
   width: 100%;
-  justify-content: space-between;
 }
 #site-header .logo {
 	flex-basis: 20%;
-	margin: 1rem;
+	margin-top: 1rem;
+}
+#site-header nav {
+	border-bottom: 2px solid #e9e8e4;
+	display: flex;
+  justify-content: flex-end;
+	align-items: center;
+	flex: 1;
+}
+#site-header > div {
+	width: 100%;
+	display: flex;
+	margin: 0 2rem;
 }
 #site-header ul {
 	list-style: none;
 	display: flex;
+	flex-wrap: wrap;
 	-webkit-padding-start: 0;
-	margin: 1rem;
+	margin: 1rem 0;
 }
-#site-header li:not(:last-of-type) {
-	padding-right: 1rem;
-}
-#site-header a, #site-header a:visited {
+#site-header ul a, #site-header ul a:visited {
+	font-size: 1.2rem;
 	color: #e9e8e4;
+	text-decoration: none;
+	font-weight: bold;
+}
+#site-header ul li {
+	padding: .4rem;
+	min-width: 5rem;
+	max-width: 8rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  line-height: 1;
+	text-align: center;
+	border-radius: 20px;
+}
+#site-header ul li:hover a {
+	color: #3a414c;
+}
+#site-header ul li:hover {
+	background-color: #e9ca52;
+}
+.logo-link {
+	display: flex;
+}
+h1 {
+	text-align: center;
+	color: #e9e8e4;
+	font-size: 4rem;
+	max-width: 40rem;
+	line-height: 1;
+	margin: 1rem 2rem;
+}
+.sub-title {
+	border-top: 2px solid #e9ca52;
+	margin-top: .6rem;
+	padding-top: .8rem;
+	display: block;
+	font-size: 1.8rem;
+	font-weight: normal;
+	line-height: 1.1;
+}
+.reference {
+	margin-top: .6rem;
+	display: block;
+	font-size: 1.4rem;
 }
 #hero {
 	flex-basis: 100%;
@@ -72,11 +130,15 @@ main > div, main > iframe {
 }
 #home #hero {
 	background: linear-gradient(
-      rgba(32,152,183, .6),
-      rgba(32,152,183, .6)
+		rgba(58, 65, 76, .85),
+		rgba(58, 65, 76, .9)
     ), url('../_images/hero-home.jpg');
-    background-size: cover;
+  background-size: cover;
 	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 .overlay {
   position: absolute;
@@ -100,6 +162,40 @@ main > div, main > iframe {
 	font-size: 2rem;
 	line-height: 1.15;
 }
+
+.info {
+	display: flex;
+	flex-wrap: wrap;
+}
+.info > div:nth-of-type(1) h2, .info > div:nth-of-type(3) h2 {
+	color: #e9e8e4;
+	border-bottom-color: #e9e8e4;
+}
+.info > div {
+	flex: 1;
+	padding: 2rem;
+	text-align: center;
+}
+.info > div:nth-of-type(1) {
+	background-color: rgba(32,152,183, 1);
+	color: #e9e8e4;
+}
+.info > div:nth-of-type(2) {
+	background-color: rgba(233, 202, 82, 1);
+	color: #3a414c;
+}
+.info > div:nth-of-type(3) {
+	background-color: rgba(208, 55, 116, 1);
+	color: #e9e8e4;
+}
+.info > div p {
+	font-size: 1.2rem;
+}
+.info h2 {
+	margin-left: 0;
+	margin-right: 0;
+}
+
 #services {
 	flex-basis: 100%;
 	background-color: #e9e8e4;
@@ -111,10 +207,12 @@ main > div, main > iframe {
 }
 #services tbody {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 #services tr {
-	flex-basis: 33.333%;
+	margin: 1rem 2rem;
+  flex: 1;
 }
 #services td {
 	display: block;
@@ -155,6 +253,7 @@ main > div, main > iframe {
 	background: url('../_images/exterior.jpg');
 	background-size: cover;
 	background-position: center;
+	min-height: 300px;
 }
 #bishops-list {
 	flex-basis: 66.666%;
@@ -163,23 +262,31 @@ main > div, main > iframe {
 }
 #bishops-list h2 {
 	color: #e9e8e4;
+	border-bottom-color: #e9ca52;
 }
-#bishops-list ul {
+#bishops-list ul.list-square li:before {
+	color: #e9ca52;
+}
+#bishops-photo img {
+	height: 100%;
+	object-fit: cover;
+}
+ul.list-square {
 	list-style: none;
 	-webkit-padding-start: 0;
 	text-align: center;
 	font-size: 1.4rem;
 	margin-top: 3rem;
 }
-#bishops-list li:not(:first-of-type):before {
+ul.list-square li:not(:first-of-type):before {
 	content: "\025AA";
   display: block;
 }
 /*New Years*/
 #new-years #hero {
 	background: linear-gradient(
-      rgba(32,152,183, .6),
-      rgba(32,152,183, .6)
+      rgba(90,115,150, .7),
+      rgba(90,115,150, .7)
     ), url('../_images/new-years/new-years-hero.jpg');
     background-size: cover;
 	background-position: center;
@@ -189,16 +296,16 @@ main > div, main > iframe {
 }
 #about #hero {
 	background: linear-gradient(
-      rgba(32,152,183, .6),
-      rgba(32,152,183, .6)
+      rgba(90,115,150, .7),
+      rgba(90,115,150, .7)
     ), url('../_images/about/about-hero.jpg');
     background-size: cover;
 	background-position: center;
 }
 #building #hero {
 	background: linear-gradient(
-      rgba(32,152,183, .6),
-      rgba(32,152,183, .6)
+      rgba(90,115,150, .7),
+      rgba(90,115,150, .7)
     ), url('../_images/building/sanctuary-facing-seats.jpg');
     background-size: cover;
 	background-position: center;
@@ -232,4 +339,42 @@ main > div, main > iframe {
 .owl-theme .owl-nav [class*=owl-] {
 	color: #3a414c;
 	background-color: #e9ca52;
+}
+
+@media screen and (max-width: 1000px) {
+	#site-header > div {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#site-header {
+		position: initial;
+		background-color: #3a414c;
+	}
+	#site-header nav {
+		width: 100%;
+	}
+	#site-header ul {
+    display: grid;
+    justify-items: center;
+    flex: 1;
+		grid-template-columns: repeat(auto-fill, minmax(10rem,1fr));
+	}
+	#hero {
+		max-height: 70vh;
+	}
+	h1 {
+		font-size: 3rem;
+	}
+	.sub-title {
+		font-size: 1.4rem;
+	}
+	.reference {
+		font-size: 1rem;
+	}
+	main > div, main > iframe {
+		flex-basis: 100%;
+	}
 }
