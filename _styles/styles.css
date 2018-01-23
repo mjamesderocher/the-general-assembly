@@ -111,6 +111,7 @@ h1 {
 	margin: 1rem 2rem;
 }
 .sub-title {
+	color: #e9e8e4;
 	border-top: 2px solid #e9ca52;
 	margin-top: .6rem;
 	padding-top: .8rem;
@@ -120,6 +121,7 @@ h1 {
 	line-height: 1.1;
 }
 .reference {
+	color: #e9e8e4;
 	margin-top: .6rem;
 	display: block;
 	font-size: 1.4rem;
@@ -128,11 +130,7 @@ h1 {
 	flex-basis: 100%;
 	height: 100vh;
 }
-#home #hero {
-	background: linear-gradient(
-		rgba(58, 65, 76, .85),
-		rgba(58, 65, 76, .9)
-    ), url('../_images/hero-home.jpg');
+#hero {
   background-size: cover;
 	background-position: center;
 	display: flex;
@@ -177,15 +175,30 @@ h1 {
 	text-align: center;
 }
 .info > div:nth-of-type(1) {
-	background-color: rgba(32,152,183, 1);
+	background: linear-gradient(
+		rgba(32,152,183, .85),
+		rgba(32,152,183, .9)
+		), url('../_images/hands.jpg');
+	background-size: cover;
+	background-position: center;
 	color: #e9e8e4;
 }
 .info > div:nth-of-type(2) {
-	background-color: rgba(233, 202, 82, 1);
+	background: linear-gradient(
+		rgba(233, 202, 82, .85),
+		rgba(233, 202, 82, .9)
+		), url('../_images/worship.jpg');
+	background-size: cover;
+	background-position: center;
 	color: #3a414c;
 }
 .info > div:nth-of-type(3) {
-	background-color: rgba(208, 55, 116, 1);
+	background: linear-gradient(
+		rgba(153, 41, 233, .85),
+		rgba(153, 41, 233, .9)
+		), url('../_images/greet.jpg');
+	background-size: cover;
+	background-position: center;
 	color: #e9e8e4;
 }
 .info > div p {
@@ -282,11 +295,20 @@ ul.list-square li:not(:first-of-type):before {
 	content: "\025AA";
   display: block;
 }
+
+#home #hero {
+	background: linear-gradient(
+		rgba(58, 65, 76, .85),
+		rgba(58, 65, 76, .9)
+		), url('../_images/hero-home.jpg');
+	background-size: cover;
+	background-position: center;
+}
 /*New Years*/
 #new-years #hero {
 	background: linear-gradient(
-      rgba(90,115,150, .7),
-      rgba(90,115,150, .7)
+      rgba(32,152,183, .7),
+      rgba(32,152,183, .75)
     ), url('../_images/new-years/new-years-hero.jpg');
     background-size: cover;
 	background-position: center;
@@ -296,18 +318,28 @@ ul.list-square li:not(:first-of-type):before {
 }
 #about #hero {
 	background: linear-gradient(
-      rgba(90,115,150, .7),
-      rgba(90,115,150, .7)
+		rgba(233, 127, 82, .7),
+		rgba(233, 127, 82, .75)
     ), url('../_images/about/about-hero.jpg');
     background-size: cover;
 	background-position: center;
 }
 #building #hero {
 	background: linear-gradient(
-      rgba(90,115,150, .7),
-      rgba(90,115,150, .7)
+      rgba(58, 65, 76, .7),
+      rgba(58, 65, 76, .75)
     ), url('../_images/building/sanctuary-facing-seats.jpg');
     background-size: cover;
+	background-position: center;
+}
+
+/*Homecoming*/
+#homecoming #hero {
+	background: linear-gradient(
+		rgba(153, 41, 233, .85),
+		rgba(153, 41, 233, .9)
+		), url('../_images/homecoming/hero-homecoming.jpg');
+	background-size: cover;
 	background-position: center;
 }
 
@@ -375,6 +407,9 @@ ul.list-square li:not(:first-of-type):before {
 		font-size: 1rem;
 	}
 	main > div, main > iframe {
+		flex-basis: 100%;
+	}
+	.info > div {
 		flex-basis: 100%;
 	}
 }
