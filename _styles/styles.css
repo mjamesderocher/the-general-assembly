@@ -165,48 +165,76 @@ h1 {
 	display: flex;
 	flex-wrap: wrap;
 }
-.info > div:nth-of-type(1) h2, .info > div:nth-of-type(3) h2 {
+.info > *:nth-of-type(1) h2, .info > *:nth-of-type(3) h2 {
 	color: #e9e8e4;
 	border-bottom-color: #e9e8e4;
 }
-.info > div {
+.info > * {
 	flex: 1;
 	padding: 2rem;
 	text-align: center;
 }
-.info > div:nth-of-type(1) {
+.info > *:nth-of-type(1), #panel1 {
+	background: linear-gradient(
+		rgba(32,152,183, .9),
+		rgba(32,152,183, .9)
+		);
+	color: #e9e8e4;
+}
+.info > *:nth-of-type(2), #panel2 {
+	background: linear-gradient(
+		rgba(233, 202, 82, .9),
+		rgba(233, 202, 82, .9)
+		);
+	color: #3a414c;
+}
+.info > *:nth-of-type(3), #panel3 {
+	background: linear-gradient(
+		rgba(153, 41, 233, .9),
+		rgba(153, 41, 233, .9)
+		);
+	color: #e9e8e4;
+}
+
+#home .info > *:nth-of-type(1) {
 	background: linear-gradient(
 		rgba(32,152,183, .85),
 		rgba(32,152,183, .9)
 		), url('../_images/hands.jpg');
 	background-size: cover;
 	background-position: center;
-	color: #e9e8e4;
 }
-.info > div:nth-of-type(2) {
+#home .info > *:nth-of-type(2) {
 	background: linear-gradient(
 		rgba(233, 202, 82, .85),
 		rgba(233, 202, 82, .9)
 		), url('../_images/worship.jpg');
 	background-size: cover;
 	background-position: center;
-	color: #3a414c;
 }
-.info > div:nth-of-type(3) {
+#home .info > *:nth-of-type(3) {
 	background: linear-gradient(
 		rgba(153, 41, 233, .85),
 		rgba(153, 41, 233, .9)
 		), url('../_images/greet.jpg');
 	background-size: cover;
 	background-position: center;
-	color: #e9e8e4;
 }
-.info > div p {
+
+.info > * p {
 	font-size: 1.2rem;
 }
 .info h2 {
 	margin-left: 0;
 	margin-right: 0;
+}
+ul.info {
+	list-style: none;
+	padding: 0;
+	flex-basis: 100%;
+}
+.panel {
+	flex-basis: 100%;
 }
 
 #services {
@@ -334,11 +362,16 @@ ul.list-square li:not(:first-of-type):before {
 }
 
 /*Homecoming*/
-#homecoming #hero {
+/*#homecoming #hero {
 	background: linear-gradient(
 		rgba(153, 41, 233, .85),
 		rgba(153, 41, 233, .9)
 		), url('../_images/homecoming/hero-homecoming.jpg');
+	background-size: cover;
+	background-position: center;
+}*/
+#homecoming #hero {
+	background-image: url('../_images/homecoming/title.jpg');
 	background-size: cover;
 	background-position: center;
 }
@@ -409,7 +442,15 @@ ul.list-square li:not(:first-of-type):before {
 	main > div, main > iframe {
 		flex-basis: 100%;
 	}
-	.info > div {
+	.info > * {
 		flex-basis: 100%;
 	}
+}
+
+.tablist li[aria-selected='true'] {
+	background-color: transparent;
+}
+	
+div[aria-hidden='true'] {
+	display: none;
 }
