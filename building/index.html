@@ -51,11 +51,21 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 			  $(".carousel").owlCarousel({
-			  	items:3,
     			lazyLoad:true,
     			nav:true,
     			loop:true,
-    			center: true
+					responsive: {
+						0: {
+							items: 1
+						},
+						450: {
+							items: 2
+						},
+						700: {
+							items: 3,
+							center: true
+						}
+					}
 			  });
 			});
 		</script>

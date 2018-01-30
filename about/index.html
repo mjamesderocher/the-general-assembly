@@ -28,91 +28,133 @@
 				<h1>About Us</h1>
 				<p class="sub-title">Text about church goes here.</p>				
 			</div>
-			<div id="beliefs">
-				<h2>We Believe</h2>
+			<ul id="tabs" class="tablist info" role="tablist">
+				<li class="tab info-box">
+					<a id="tab1" href="#panel1" aria-controls="panel1" class="tablink info-box-content"  tabindex="0" role="tab" aria-selected="true">
+						<h2>History</h2>
+					</a>
+				</li>
+				<li class="tab info-box">
+					<a id="tab2" href="#panel2" aria-controls="panel2" class="tablink info-box-content" tabindex="0" role="tab" >
+						<h2>Our Beliefs</h2>
+					</a>
+				</li>
+				<li class="tab info-box">
+					<a id="tab3" href="#panel3" aria-controls="panel3" class="tablink info-box-content" tabindex="0" role="tab" >
+						<h2>Contact Us</h2>
+					</a>
+				</li>
+			</ul>
+			<div id="panel1" class="panel" aria-labelledby="tab1" role="tabpanel" aria-hidden="false">
+				<h2>History</h2>
+				<article>
+						<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+						<p>Pellentesque ut sapien consequat, auctor metus non, viverra justo. Nullam ut ipsum ornare, venenatis est nec, sodales turpis. Duis maximus rhoncus tempor. Pellentesque cursus blandit congue. Maecenas vel urna eu massa bibendum porttitor ac id purus. Aliquam tristique tempus lectus, accumsan rutrum elit interdum a. Quisque egestas ligula scelerisque est sollicitudin, at placerat ante tempus. Sed facilisis velit sed aliquet gravida. Phasellus feugiat sapien sed est porttitor, vitae porta velit malesuada. Vestibulum elementum neque erat, sit amet sollicitudin felis eleifend efficitur.</p>
+						<h3>Quisque augue felis, lacinia ac tempus vel, fringilla et ante.</h3>
+						<p>Sed sagittis velit libero. Aenean facilisis, mi non iaculis ultricies, metus lorem imperdiet massa, quis cursus enim lacus consequat libero. Sed gravida, dolor vel finibus feugiat, ante leo accumsan sapien, eget consequat ligula neque quis nisl. Etiam tempus placerat venenatis. Nam eu quam ut odio finibus porta. Nullam pulvinar in massa et tristique. Mauris fermentum massa ut convallis aliquam. Duis at mauris lacinia, mollis nunc non, ullamcorper neque. Maecenas placerat consectetur nibh, quis volutpat mi molestie sit amet. Morbi nec purus vehicula, interdum augue quis, venenatis mi. Mauris tincidunt eu elit nec suscipit.</p>
+				</article>
+			</div>
+			<div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel">
+				<h2>Our Beliefs</h2>
 				<table>
-				  <tr>
-				    <td>The name of God's church is recognized in heaven</td>
-				    <td>Hebrews 12:23</td>
-				  </tr>
-				  <tr>
-				    <td>Jesus talking to Peter about the church</td>
-				    <td>Matthew 16:15-20</td>
-				  </tr>
-				  <tr>
-				    <td>Born of water and the Spirit</td>
-				    <td>John 3:1-8</td>
-				  </tr>
-				  <tr>
-				    <td>Repentence and baptism</td>
-				    <td>Acts 2:38-39</td>
-				  </tr>
-				  <tr>
-				    <td>Baptism</td>
-				    <td>Matthew 28:18-20</td>
-				  </tr>
-				  <tr>
-				    <td>Holy Ghost given by laying on of the Apostles' hands</td>
-				    <td>Acts 19:1-8, Acts 8:1-24</td>
-				  </tr>
-				  <tr>
-				    <td>Foot washing</td>
-				    <td>John 13:1-18</td>
-				  </tr>
-				  <tr>
-				    <td>Nine spiritual gifts</td>
-				    <td>1 Corinthians 12:8-10</td>
-				  </tr>
-				  <tr>
-				    <td>If sick, call for the elders</td>
-				    <td>2 Corinthians 13:12, 1 Thessalonians 5:26</td>
-				  </tr>
-				  <tr>
-				    <td>Meekness</td>
-				    <td>Matthew 5:1-20</td>
-				  </tr>
-				  <tr>
-				    <td>Five ministering gifts: apostles, prophets, evangelists, pastors, and teachers</td>
-				    <td>Ephesians 4:11-17</td>
-				  </tr>
-				  <tr>
-				    <td>Penalty for adding to or taking from the Word</td>
-				    <td>Revelation 22:18-21</td>
-				  </tr>
-				  <tr>
-				    <td>Faith comes by hearing</td>
-				    <td>Romans 10:9-18</td>
-				  </tr>
-				  <tr>
-				    <td>Be doers of the Word</td>
-				    <td>James 1:21-27</td>
-				  </tr>
-				  <tr>
-				    <td>If you love Jesus keep his commandments</td>
-				    <td>John 14:15-21</td>
-				  </tr>
-				  <tr>
-				    <td>Principles of the doctrine of Christ</td>
-				    <td>Hebrews 6:1-3</td>
-				  </tr>
-				  <tr>
-				    <td>One straight and narrow way</td>
-				    <td>Matthew 7:13-27</td>
-				  </tr>
-				  <tr>
-				    <td>The five signs that follow the believers</td>
-				    <td>Mark 16:17-18</td>
-				  </tr>
-				  <tr>
-				    <td>The Lord cometh quickly</td>
-				    <td>Revelation 22:7-14</td>
-				  </tr>
+					<tr>
+						<td>The name of God's church is recognized in heaven</td>
+						<td>Hebrews 12:23</td>
+					</tr>
+					<tr>
+						<td>Jesus talking to Peter about the church</td>
+						<td>Matthew 16:15-20</td>
+					</tr>
+					<tr>
+						<td>Born of water and the Spirit</td>
+						<td>John 3:1-8</td>
+					</tr>
+					<tr>
+						<td>Repentence and baptism</td>
+						<td>Acts 2:38-39</td>
+					</tr>
+					<tr>
+						<td>Baptism</td>
+						<td>Matthew 28:18-20</td>
+					</tr>
+					<tr>
+						<td>Holy Ghost given by laying on of the Apostles' hands</td>
+						<td>Acts 19:1-8, Acts 8:1-24</td>
+					</tr>
+					<tr>
+						<td>Foot washing</td>
+						<td>John 13:1-18</td>
+					</tr>
+					<tr>
+						<td>Nine spiritual gifts</td>
+						<td>1 Corinthians 12:8-10</td>
+					</tr>
+					<tr>
+						<td>If sick, call for the elders</td>
+						<td>2 Corinthians 13:12, 1 Thessalonians 5:26</td>
+					</tr>
+					<tr>
+						<td>Meekness</td>
+						<td>Matthew 5:1-20</td>
+					</tr>
+					<tr>
+						<td>Five ministering gifts: apostles, prophets, evangelists, pastors, and teachers</td>
+						<td>Ephesians 4:11-17</td>
+					</tr>
+					<tr>
+						<td>Penalty for adding to or taking from the Word</td>
+						<td>Revelation 22:18-21</td>
+					</tr>
+					<tr>
+						<td>Faith comes by hearing</td>
+						<td>Romans 10:9-18</td>
+					</tr>
+					<tr>
+						<td>Be doers of the Word</td>
+						<td>James 1:21-27</td>
+					</tr>
+					<tr>
+						<td>If you love Jesus keep his commandments</td>
+						<td>John 14:15-21</td>
+					</tr>
+					<tr>
+						<td>Principles of the doctrine of Christ</td>
+						<td>Hebrews 6:1-3</td>
+					</tr>
+					<tr>
+						<td>One straight and narrow way</td>
+						<td>Matthew 7:13-27</td>
+					</tr>
+					<tr>
+						<td>The five signs that follow the believers</td>
+						<td>Mark 16:17-18</td>
+					</tr>
+					<tr>
+						<td>The Lord cometh quickly</td>
+						<td>Revelation 22:7-14</td>
+					</tr>
 				</table>
 			</div>
+			<div id="panel3" class="panel" aria-labelledby="tab3" role="tabpanel">
+				<h2>Contact Us</h2>
+				<form id="contact" data-netlify="true">
+					<label for="name">Your name</label>
+					<input name="Name" id="name" type="text" required/>
+					<label for="email">Email address</label>
+					<input name="Email address" id="email" type="email" required/>
+					<label for="message">Message</label>
+					<textarea name="Message" id="message"></textarea>
+					<input type="submit" />
+				</form>
+			</div> 
 		</main>
-		<footer>
-		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script src="../_scripts/app.js"></script>
 		<script>
+			$(window).resize(function(){
+				tabs()
+			})
+			tabs();
 			var refTagger = {
 				settings: {
 					bibleVersion: "KJV",			

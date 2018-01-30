@@ -31,21 +31,57 @@
 				<p class="reference">2:00 PM&ndash;8:00 PM</p>-->
 			</div>
 			<ul id="tabs" class="tablist info" role="tablist">
-				<li id="tab1" class="tab" aria-controls="panel1" tabindex="0" aria-selected="true" role="tab"><h2>Details</h2></li>
-				<li id="tab2" class="tab" aria-controls="panel2" tabindex="0" role="tab"><h2>Store</h2></li>
-				<li id="tab3" class="tab" aria-controls="panel3" tabindex="0" role="tab"><h2>Directions</h2></li>
+				<li class="tab info-box">
+					<a id="tab1" href="#panel1" aria-controls="panel1" class="tablink info-box-content"  tabindex="0" role="tab" aria-selected="true">
+						<h2>Details</h2>
+					</a>
+				</li>
+				<li class="tab info-box">
+					<a id="tab2" href="#panel2" aria-controls="panel2" class="tablink info-box-content" tabindex="0" role="tab" >
+						<h2>Store</h2>
+					</a>
+				</li>
+				<li class="tab info-box">
+					<a id="tab3" href="#panel3" aria-controls="panel3" class="tablink info-box-content" tabindex="0" role="tab" >
+						<h2>Directions</h2>
+					</a>
+				</li>
 			</ul>
 			<div id="panel1" class="panel" aria-labelledby="tab1" role="tabpanel" aria-hidden="false">
-				 details
+				<h2>Details</h2>
+				<article>
+					<p class="blurb">Church of the Firstborn in Yale is hosting a “Gaither Homecoming” style concert event!</p>
+					<p class="date">June 2nd 2018</p>
+					<h3>Details are still being determined, but here is a sneak peek of what to expect!</h3>
+					<h4>Live Gospel music performances including:</h4>
+					<ul class="list-square">
+						<li>Bro Kerby Thompson, Sis Marvel Brown, and Bro Joe Chapman</li>
+						<li>Bro Michael and Sis Taylor Ude</li>
+						<li>The Heidlebaugh Family</li>
+						<li>And more!</li>
+					</ul>
+					<h4>Option for a professionally catered meal before the show</h4>
+					<h4>CD’s, DVD’s, T-Shirts, etc will also be available for sale</h4>
+					<p>Many of the old brethren music cassettes will be made available for the first time to purchase on CD!</p>
+					<h3>Proceeds benefit Yale building fund</h3>
+					<p>We are preparing for a very large turnout, and have reserved space at the Payne County Expo Center in Stillwater. Tickets will be available to purchase early February. Although we have a large venue, we expect seating to sell out quickly!</p>
+					<p>This is a beautiful opportunity for Brethren all over the country to come fellowship and reminisce with us. Many details are still being ironed out, please follow this event and <a href="https://www.facebook.com/Church-of-the-Firstborn-Yale-901357600041384/">our Facebook page</a> for future updates.</p>
+					<h3>Please share this event!</h3>
+					<p>Anyone is encouraged to invite people from their friends list to come join us for the event. This is a Church sponsored event, and proper conduct is expected. Anyone is welcome to attend, but the event is geared toward Brethren in The Church of the Firstborn.</p> 
+					<p>Can’t wait to see everyone there! God bless!</p>
+				</article>
 			</div>
-			<div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel" aria-hidden="true">
+			<div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel">
+				<h2>Store</h2>
 				<div class="store">
-					<header>
-						<div class="snipcart-summary">
-							Number of items: <span class="snipcart-total-items"></span>
-							Total price: <span class="snipcart-total-price"></span>
-						</div>
-						<a href="#" class="snipcart-checkout">Click here to checkout</a>
+					<header class="store-header snipcart-summary">
+							<p class="snipcart-total-price"></p>
+							<a href="#" class="snipcart-checkout">
+								<img class="cart" src="../_images/cart.svg" />
+							</a>
+							<a href="#" class="snipcart-checkout">
+								<div class="snipcart-total-items"></div>
+							</a>
 					</header>
 					<ul class="store-items">
 						<li>
@@ -64,13 +100,11 @@
 						<li>
 							<img src="data:image/jpeg;base64,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" />
 							<h3>CD 2</h3>
-							<input type="number" data-for="3" oninput="numberChange(this)"/>
 							<button
 								class="snipcart-add-item"
 								data-item-id="3"
 								data-item-name="CD"
 								data-item-price="10.00"
-								data-item-quantity="0"
 								data-item-url="http://myapp.com/products/bacon"
 								data-item-description="Another CD">
 										Add to Cart
@@ -92,57 +126,20 @@
 					</ul>
 				</div>
 			</div>
-			<div id="panel3" class="panel" aria-labelledby="tab3" role="tabpanel" aria-hidden="true">
-				directions	 
+			<div id="panel3" class="panel" aria-labelledby="tab3" role="tabpanel">
+				<h2>Directions</h2>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3222.9101373146123!2d-97.00453668472909!3d36.12004698009433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b10c746eeffef5%3A0xe909c12b22d3176d!2s4518+Expo+Cir+E%2C+Stillwater%2C+OK+74075!5e0!3m2!1sen!2sus!4v1516986817713" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>	 
 			</div>  
 		</main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="MDMyOTUzZTktZTZjMS00NmFiLTk2YWMtY2Y3NzdhMzNjNWIwNjM2NTIyNTIwMzU4Njg5Mjg2" id="snipcart"></script>
+		<script src="../_scripts/app.js"></script>
 		<script>
-			var delayTimer;
-			function numberChange(e) {
-				var item = $("ul").find("[data-item-id='" + e.dataset.for + "']");
-				delayTimer = setTimeout(function() {
-					var val = e.value;
-        	item[0].dataset.itemQuantity = val;
-    		}, 400);
-			}
-
-			var tabs = $("#tabs li").length;
-			$("li[role='tab']").click(function(){  
-				$("li[role='tab']").attr("aria-selected","false"); //deselect all the tabs 
-				$(this).attr("aria-selected","true");  // select this tab
-				var tabpanid= $(this).attr("aria-controls"); //find out what tab panel this tab controls  
-				var tabpan = $("#"+tabpanid);  
-				$("div[role='tabpanel']").attr("aria-hidden","true"); //hide all the panels 
-				tabpan.attr("aria-hidden","false");  // show our panel
-			});
-			$("li[role='tab']").keydown(function(ev) {
-				if (ev.which ==13) {
-					$(this).click()
-				}
-			});
-			$("li[role='tab']").keydown(function(ev) {
-				if (ev.which == 39  || ev.which == 37) { //right
-					var selected= $(this).attr("aria-selected"); 
-					if (selected == "true") {
-						var tabpanid = $("li[aria-selected='true']").attr("aria-controls").slice(5);
-						var next = 0;
-						if (ev.which == 39 && Number(tabpanid) < tabs) {
-							next = Number(tabpanid) + 1;
-						} else if (ev.which == 37 && Number(tabpanid) > 1) {
-							next = Number(tabpanid) - 1;
-						}
-						if (next != 0) {
-							$("#tab" + next).attr("aria-selected","true").focus(); 
-							$(this).attr("aria-selected","false");  
-							$("div[role='tabpanel']").attr("aria-hidden","true");
-							var tabpan = $("#panel"+next);
-							tabpan.attr("aria-hidden","false");
-						}
-					}
-				}
-			});
+			Snipcart.execute('config', 'show_continue_shopping', true);
+			$(window).resize(function(){
+				tabs()
+			})
+			tabs();
 		</script>
 	</body>
 </html>
