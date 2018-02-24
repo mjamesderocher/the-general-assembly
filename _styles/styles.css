@@ -54,11 +54,12 @@ button, input[type="submit"] {
   border-radius: 20px;
   border: 3px solid #3a414c;
   font-size: 1.6rem;
-  padding: .2rem 1rem;
+  padding: .8rem 1rem;
   font-family: 'Vollkorn', serif;
   font-weight: bold;
 	color: #3a414c;
 	margin: 1rem;
+	line-height: 1;
 }
 main {
 	width: 100%;
@@ -215,6 +216,10 @@ h1 {
 		);
 	color: #3a414c;
 }
+.info-box:nth-of-type(2) h3, #panel2 h3 {
+	border-bottom: 2px solid #3a414c;
+	border-top: 2px solid #3a414c;
+}
 .info-box:nth-of-type(3), #panel3 {
 	background: linear-gradient(
 		rgba(153, 41, 233, .9),
@@ -236,8 +241,8 @@ h1 {
 		), url('../_images/hands.jpg');
 	background-size: cover;
 	background-position: center;
-	flex: 0;
-	flex-basis: 66.6667%;
+	flex: 1;
+  flex-basis: 66.6667%;
 }
 #home .info-box:nth-of-type(2) {
 	background: linear-gradient(
@@ -246,6 +251,7 @@ h1 {
 		), url('../_images/greet.jpg');
 	background-size: cover;
 	background-position: center;
+	flex-basis: 33.3334%;
 }
 #home .info-box:nth-of-type(3) {
 	background: linear-gradient(
@@ -493,10 +499,13 @@ textarea {
 .store-header > * + * {
 	padding-left: .5rem;
 }
-.store-header a {
+#panel2.panel .store-header a {
 	text-decoration: none;
 	display: flex;
 	box-shadow: none;
+}
+#panel2.panel .store-header a:hover {
+	background-color: transparent;
 }
 .snipcart-summary-empty > * {
 	width: 0;
@@ -534,9 +543,101 @@ img.cart {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	text-align: center;
 }
+.store-item-actions {
+	display: flex;
+	justify-content: center;
+}
+.store-item-actions button::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 3px solid #3a414c;
+	left: -6px;
+	top: -6px;
+	border-radius: 23px;
+	padding: 3px;
+}
+.store-item-actions button {
+	color: #e9ca52;
+	background-color: #3a414c;
+	border: transparent;
+	position: relative;
+}
+.store-item-actions button:hover {
+	background-color: #5a6576;
+}
+.store-item-actions button:hover::before {
+	border: 3px #5a6576 dashed;
+}
+.lnr {
+	margin: 1rem;
+	fill: #3a414c;
+}
+p.price {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+/*Modal styles*/
+.invisible {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+.hidden {
+	display: none;
+}
+#js-modal-page {
+	width: 100%;
+}
+#js-modal-page[aria-hidden='true'] {
+	display: block;
+}
+/* needed for old browsers */
+dialog {
+  display: block;
+}
+dialog > div {
+	display: flex;
+	flex-direction: column-reverse;
+}
+/* removes scroll when modal is opened */
+.no-scroll {
+  overflow: hidden;
+}
+/* overlay covers everything */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .5);
+	z-index: 666;
+	cursor: pointer;
+}
+/* modal */
+.modal {
+  position: fixed;
+  left: 25%;
+  right: auto;
+  top: 5vh;
+  width: 50%;
+  background: #fff;
+	z-index: 667;
+	max-height: 85vh;
+	overflow-y: auto;
+}
+
 .owl-nav {
 	position: absolute;
   bottom: 0;
