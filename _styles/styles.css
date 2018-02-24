@@ -127,7 +127,7 @@ main > div, main > iframe {
 #site-header ul li:hover {
 	background-color: #e9ca52;
 }
-#site-header .current {
+#site-header ul a.current {
 	color: #e9ca52;
 }
 .logo-link {
