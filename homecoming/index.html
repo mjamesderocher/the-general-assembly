@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="/_styles/styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,700|Amatic+SC:700|Dancing+Script:700" rel="stylesheet">
 	<link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/_styles/jquery.toast.min.css">
 	</head>
 	<body id="homecoming">
 		<header id="site-header">
@@ -73,7 +74,9 @@
 			<div id="panel2" class="panel" aria-labelledby="tab2" role="tabpanel">
 				<h2>Store</h2>
 				<div class="store">
-					<header class="store-header snipcart-summary">
+					<header class="store-header">
+						<p><strong>Save 10% off your order when you buy a ticket, meal, and T-shirt!</strong></p>
+						<div class=" snipcart-summary">
 							<p class="snipcart-total-price"></p>
 							<a href="#" class="snipcart-checkout">
 								<img class="cart" src="../_images/cart.svg" />
@@ -81,14 +84,19 @@
 							<a href="#" class="snipcart-checkout">
 								<div class="snipcart-total-items"></div>
 							</a>
+							<a href="#" class="snipcart-checkout">
+								<strong>Checkout</strong>
+							</a>
+						</div>
 					</header>
-					<p><strong>Save 10% off your order when you buy a ticket, meal, and T-shirt!</strong></p>
 					<ul class="store-items">
 						<li>
 							<h3>Adult Ticket</h3>
 							<svg class="lnr lnr-tag"><use xlink:href="#lnr-tag"></use></svg>
 							<p class="price">$20.00</p>
 							<div class="store-item-actions">
+								<label for="quantity-001">Quantity</label>
+								<input id="quantity-001" type="number" min="0" value="1" data-for="001" oninput="numberChange(this)"/>
 								<button
 									class="snipcart-add-item"
 									data-item-id="001"
@@ -105,6 +113,8 @@
 							<svg class="lnr lnr-tag"><use xlink:href="#lnr-tag"></use></svg>
 							<p class="price">$10.00</p>
 							<div class="store-item-actions">
+								<label for="quantity-002">Quantity</label>
+								<input id="quantity-002" type="number" min="0" value="1" data-for="002" oninput="numberChange(this)"/>
 								<button
 									class="snipcart-add-item"
 									data-item-id="002"
@@ -121,6 +131,8 @@
 							<svg class="lnr lnr-dinner"><use xlink:href="#lnr-dinner"></use></svg>
 							<p class="price">$15.00</p>
 							<div class="store-item-actions">
+								<label for="quantity-003">Quantity</label>
+								<input id="quantity-003" type="number" min="0" value="1" data-for="003" oninput="numberChange(this)"/>
 								<button
 									class="snipcart-add-item"
 									data-item-id="003"
@@ -137,6 +149,8 @@
 							<svg class="lnr lnr-dinner"><use xlink:href="#lnr-dinner"></use></svg>
 							<p class="price">$7.50</p>
 							<div class="store-item-actions">
+								<label for="quantity-004">Quantity</label>
+								<input id="quantity-004" type="number" min="0" value="1" data-for="004" oninput="numberChange(this)"/>
 								<button
 									class="snipcart-add-item"
 									data-item-id="004"
@@ -148,23 +162,29 @@
 								</button>
 							</div>
 						</li>
-						<li>
+						<li style="grid-row: 2 / 4;">
 							<h3>T-Shirt</h3>
 							<svg class="lnr lnr-shirt"><use xlink:href="#lnr-shirt"></use></svg>
 							<p class="price">$15.00</p>
+							<ul id="shirts-list">
+								<li class="shirts-item">
+									<input type="number" min="0" value="1" />
+									<select>
+										<option value="" disabled selected>Select Size</option>
+										<option value="Small">Small</option>
+										<option value="Medium">Medium</option>
+										<option value="Large">Large</option>
+										<option value="X-Large">X-Large</option>
+										<option value="2X-Large">2X (+ $2.00)</option>
+										<option value="3X-Large">3X (+ $2.00)</option>
+										<option value="4X-Large">4X (+ $2.00)</option>
+									</select>
+								</li>
+							</ul>
+							<button id="shirts-button-increment"><svg class="lnr lnr-plus-circle"><use xlink:href="#lnr-plus-circle"></use></svg> Add another shirt</button>
 							<div class="store-item-actions">
-								<button
-									class="snipcart-add-item"
-									data-item-id="005"
-									data-item-name="T-Shirt"
-									data-item-price="15.00"
-									data-item-custom1-name="Size"
-									data-item-custom1-options="Small|Medium|Large|X-Large|2X-Large[+2.00]|3X-Large[+2.00]|4X-Large[+2.00]"
-									data-item-url="https://yale.cofb.us/homecoming/"
-								>
-									Add to Cart
-								</button>
-							<div class="store-item-actions">
+								<button id="shirts-button-add-to-cart">Add to Cart</button>
+							</div>
 						</li>
 						<li>
 							<h3>Kerby and Joe Music CD</h3>
@@ -192,6 +212,8 @@
 							</div>
 							<p class="price">$10.00</p>
 							<div class="store-item-actions">
+								<label for="quantity-006">Quantity</label>
+								<input id="quantity-006" type="number" min="0" value="1" data-for="006" oninput="numberChange(this)"/>
 								<button class="js-modal"
 									data-modal-content-id="item-006-description"
 									data-modal-close-text="Close"
@@ -238,6 +260,8 @@
 							</div>
 							<p class="price">$10.00</p>
 							<div class="store-item-actions">
+								<label for="quantity-007">Quantity</label>
+								<input id="quantity-007" type="number" min="0" value="1" data-for="007" oninput="numberChange(this)"/>
 								<button class="js-modal"
 									data-modal-content-id="item-007-description"
 									data-modal-close-text="Close"
@@ -277,6 +301,8 @@
 							</div>
 							<p class="price">$20.00</p>
 							<div class="store-item-actions">
+								<label for="quantity-008">Quantity</label>
+								<input id="quantity-008" type="number" min="0" value="1" data-for="008" oninput="numberChange(this)"/>
 								<button class="js-modal"
 									data-modal-content-id="item-008-description"
 									data-modal-close-text="Close"
@@ -303,16 +329,83 @@
 			</div>  
 		</main>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="MDMyOTUzZTktZTZjMS00NmFiLTk2YWMtY2Y3NzdhMzNjNWIwNjM2NTIyNTIwMzU4Njg5Mjg2" id="snipcart"></script>
+		<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YmI1M2MxZjMtMjhmOS00ZmM3LWFkOGQtNDhjZTIzMzE3ZDI3NjM2NTYxNTczMjM5Mjk0MzU0" id="snipcart"></script>
 		<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 		<script src="../_scripts/app.js"></script>
 		<script src="../_scripts/jquery-accessible-modal-window-aria.js"></script>
+		<script src="../_scripts/jquery.toast.min.js"></script>
 		<script>
 			Snipcart.execute('config', 'show_continue_shopping', true);
+			Snipcart.api.configure('show_cart_automatically', false);
+			var shirtItem = `<li class="shirts-item">
+					<input type="number" min="0" value="1" />
+					<select>
+						<option value="" disabled selected>Select Size</option>
+						<option value="Small">Small</option>
+						<option value="Medium">Medium</option>
+						<option value="Large">Large</option>
+						<option value="X-Large">X-Large</option>
+						<option value="2X-Large">2X (+ $2.00)</option>
+						<option value="3X-Large">3X (+ $2.00)</option>
+						<option value="4X-Large">4X (+ $2.00)</option>
+					</select>
+				</li>`
+			Snipcart.subscribe('item.added', function (item) {
+				var qty = $("ul").find("[data-for='" + item.id + "']");
+				if (item.id == "005") {
+					$("#shirts-list").replaceWith('<ul id="shirts-list">' + shirtItem + '</ul>')
+				} else if (qty.length !== 0) {
+					qty[0].value = 1;
+				}
+				var plural = ((item.quantity === 1) ? '' : 's');
+				$.toast({
+					text: 'Added ' + item.quantity + ' ' + item.name + plural + ' to cart!<br /><a href="#" class="snipcart-checkout">Click here to checkout</a>',
+					hideAfter: 6000,
+					loaderBg: '#2098b7',
+					bgColor: '#3a414c'
+				})
+			});
+			$(document).ready(function(){
+				$("#shirts-button-increment").click(function(){
+					$("#shirts-list").append(shirtItem);
+				});
+				$("#shirts-button-add-to-cart").click(function(){
+					var shirtsOrder = [];
+					$(".shirts-item").each(function(index, element) {
+						var size = $(element).find("select");
+						var qty = $(element).find("input");
+						console.log(qty)
+						shirtsOrder.push({
+							"id": "005",
+							"name": "T-Shirt",
+							"description": "",
+							"url": "https://yale.cofb.us/homecoming",
+							"price": "15.00",
+							"quantity": qty[0].value,
+							"stackable": true,
+							"customFields": [{
+									"name": "Size",
+									"options": "Small|Medium|Large|X-Large|2X-Large[+2.00]|3X-Large[+2.00]|4X-Large[+2.00]",
+									"value": size[0].value,
+									"required": true
+							}]
+						})
+					});
+					Snipcart.api.items.add(shirtsOrder);
+				});
+			});
 			$(window).resize(function(){
 				tabs()
 			})
 			tabs();
+			var delayTimer;
+			function numberChange(e) {
+				var item = $("ul").find("[data-item-id='" + e.dataset.for + "']");
+				delayTimer = setTimeout(function() {
+					var val = e.value;
+					item[0].dataset.itemQuantity = val;
+				}, 400);
+			}
 		</script>
 	</body>
 </html>

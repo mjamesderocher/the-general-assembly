@@ -17,9 +17,9 @@ body {
 	flex-wrap: wrap;
 	overflow-x: hidden;
 }
-main {
+/*main {
 	overflow: hidden;
-}
+}*/
 h2 {
 	border-bottom: 2px solid #3a414c;
   text-align: center;
@@ -222,10 +222,7 @@ h1 {
 	color: #e9e8e4;
 }
 .info-box:nth-of-type(2), #panel2 {
-	background: linear-gradient(
-		rgba(233, 202, 82, .9),
-		rgba(233, 202, 82, .9)
-		);
+	background: #e9ca52;
 	color: #3a414c;
 }
 .info-box:nth-of-type(2) h3, #panel2 h3 {
@@ -300,7 +297,7 @@ ul.info {
 }
 .panel a, .info-box-content a, #panel2.panel a {
 	box-shadow: inset 0 -10px 0 rgba(32,152,183, .7);
-	color: black;
+	color: #3a414c;
 	text-decoration: none;
 }
 .panel a:hover, .info-box-content a:hover, #panel2.panel a:hover {
@@ -530,20 +527,29 @@ textarea {
 
 .store-header {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	align-items: center;
-	padding: 1rem 0;
+	position: sticky;
+	top: 0;
+	background: linear-gradient( rgba(233, 202, 82, .95), rgba(233, 202, 82, .95) );
+	border-bottom: #3a414c 2px solid;
+	z-index: 1;
+	margin: -1rem -2rem 2rem;
+	padding: 1rem 2rem;
 }
-.store-header > * + * {
+.snipcart-summary {
+	display: flex;
+}
+.snipcart-summary > * + * {
 	padding-left: .5rem;
 }
 .store strong {
 	text-align: center;
 	font-size: 1.4rem;
 	display: block;
-	margin-bottom: 1rem;
 }
-#panel2.panel .store-header a {
+#panel2.panel .snipcart-summary a {
 	text-decoration: none;
 	display: flex;
 	box-shadow: none;
@@ -604,7 +610,7 @@ img.cart {
 	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
 	grid-gap: 40px;
 }
-.store-items li {
+.store-items > li {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -614,8 +620,23 @@ img.cart {
 }
 .store-item-actions {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	flex-wrap: wrap;
+}
+.store-item-actions input[type="number"], .shirts-item input[type="number"], .shirts-item select {
+	width: 50px;
+	margin: .5rem 1rem .7rem;
+	font-size: 1.2rem;
+	background-color: rgba(0,0,0, .1);
+	border: transparent;
+	border-bottom: 2px solid #3a414c;
+	padding: .4rem .2rem;
+	background-color: rgba(0,0,0, .1);
+	text-align: right;
+	color: #3a414c;
+}
+.shirts-item select {
+	width: auto;
 }
 .store-item-actions button::before {
 	content: "";
@@ -651,6 +672,25 @@ img.cart {
 p.price {
 	font-weight: bold;
 	font-size: 2rem;
+}
+#shirts-list {
+	margin: 0;
+	padding: 0;
+}
+#shirts-button-increment {
+	font-size: 1rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  justify-content: space-around;
+  padding: .4rem;
+  border: dashed 2px;
+}
+#shirts-button-increment .lnr {
+	height: 30px;
+	width: 30px;
+	margin: 0;
+	margin-top: -3px;
 }
 
 /*Modal styles*/

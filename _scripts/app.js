@@ -1,4 +1,3 @@
-
 var tabs = function() {
   if ($(window).width() > 700) {
     var tabs = $("#tabs li").length;
