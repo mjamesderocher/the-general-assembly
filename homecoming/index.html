@@ -103,8 +103,16 @@
 									data-item-name="Adult Ticket"
 									data-item-price="20.00"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 								>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -121,8 +129,16 @@
 									data-item-name="Child Ticket"
 									data-item-price="10.00"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 								>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -139,8 +155,16 @@
 									data-item-name="Adult Meal"
 									data-item-price="15.00"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 								>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -157,8 +181,16 @@
 									data-item-name="Child Meal"
 									data-item-price="7.50"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 								>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -202,8 +234,16 @@
 									data-item-name="Kerby and Joe Music CD"
 									data-item-price="10.00"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 									>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -250,8 +290,16 @@
 									data-item-name="The Gospel 4 Music CD"
 									data-item-price="10.00"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 								>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -291,8 +339,16 @@
 									data-item-name="Memories DVD"
 									data-item-price="20.00"
 									data-item-url="https://yale.cofb.us/homecoming/"
+									onclick="loader(this)"
 								>
-									Add to Cart
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
 								</button>
 							</div>
 						</li>
@@ -317,7 +373,16 @@
 							</ul>
 							<button id="shirts-button-increment"><svg class="lnr lnr-plus-circle"><use xlink:href="#lnr-plus-circle"></use></svg> Add another shirt</button>
 							<div class="store-item-actions">
-								<button id="shirts-button-add-to-cart">Add to Cart</button>
+								<button id="shirts-button-add-to-cart" data-item-id="005">
+									<div style="color: #e9ca52" class="la-line-scale la-sm">
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+										<div></div>
+									</div>
+									<p class="store-button-text">Add to Cart</p>
+								</button>
 							</div>
 						</li>
 					</ul>
@@ -335,6 +400,9 @@
 		<script src="../_scripts/jquery-accessible-modal-window-aria.js"></script>
 		<script src="../_scripts/jquery.toast.min.js"></script>
 		<script>
+			function loader(e) {
+				$(e).addClass("loading");
+			}
 			Snipcart.execute('config', 'show_continue_shopping', true);
 			Snipcart.api.configure('show_cart_automatically', false);
 			var shirtItem = `<li class="shirts-item">
@@ -352,6 +420,7 @@
 				</li>`
 			Snipcart.subscribe('item.added', function (item) {
 				var qty = $("ul").find("[data-for='" + item.id + "']");
+				var button = $("ul").find("[data-item-id='" + item.id + "']");
 				if (item.id == "005") {
 					$("#shirts-list").replaceWith('<ul id="shirts-list">' + shirtItem + '</ul>')
 				} else if (qty.length !== 0) {
@@ -364,17 +433,19 @@
 					loaderBg: '#2098b7',
 					bgColor: '#3a414c'
 				})
+				$(button).removeClass("loading");
 			});
 			$(document).ready(function(){
 				$("#shirts-button-increment").click(function(){
 					$("#shirts-list").append(shirtItem);
 				});
-				$("#shirts-button-add-to-cart").click(function(){
+				$("#shirts-button-add-to-cart").click(function(a){
+					console.log(a)
+					loader(a.currentTarget);
 					var shirtsOrder = [];
 					$(".shirts-item").each(function(index, element) {
 						var size = $(element).find("select");
 						var qty = $(element).find("input");
-						console.log(qty)
 						shirtsOrder.push({
 							"id": "005",
 							"name": "T-Shirt",
@@ -413,6 +484,13 @@
 					var val = e.value;
 					item[0].dataset.itemQuantity = val;
 				}, 400);
+				if (e.dataset.for == "001") {
+					var meal = $("ul").find("[data-for='003']")
+					$(meal).attr({"max" : e.value});
+				} else if (e.dataset.for == "002") {
+					var meal = $("ul").find("[data-for='004']")
+					$(meal).attr({"max" : e.value});
+				}
 			}
 		</script>
 	</body>
