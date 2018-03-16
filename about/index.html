@@ -148,8 +148,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 		<script src="../_scripts/app.js"></script>
 		<script>
+			var oldWidth = $(document).width();
 			$(window).resize(function(){
-				tabs()
+				var newWidth = $(document).width();
+				if (oldWidth < 700 && newWidth >= 700) {
+					tabs();
+					oldWidth = newWidth;
+				} else if (oldWidth > 700 && newWidth < 700){
+					tabs();
+					oldWidth = newWidth;
+				}
 			})
 			tabs();
 			var refTagger = {

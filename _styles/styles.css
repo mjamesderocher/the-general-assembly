@@ -623,6 +623,9 @@ img.cart {
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
+.store-item-actions label {
+	margin-left: 1rem;
+}
 .store-item-actions input[type="number"], .shirts-item input[type="number"], .shirts-item select {
 	width: 50px;
 	margin: .5rem 1rem .7rem;
@@ -676,6 +679,7 @@ p.price {
 #shirts-list {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 #shirts-button-increment {
 	font-size: 1rem;
@@ -706,6 +710,9 @@ p.price {
 }
 .hidden {
 	display: none;
+}
+#js-modal > div {
+	padding: 1rem;
 }
 #js-modal-page {
 	width: 100%;
