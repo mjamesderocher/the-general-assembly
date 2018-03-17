@@ -544,6 +544,31 @@ textarea {
 .snipcart-summary > * + * {
 	padding-left: .5rem;
 }
+.snip-layout .snip-header__continue {
+	display: block;
+}
+/*.snip-btn--right:first-of-type {
+	position: relative;
+}
+.snip-btn--right:first-of-type::before {
+	content: "Checkout";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	font-weight: 700;
+	border-radius: 3px;
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 10px;
+	height: 36px;
+	line-height: 36px;
+	outline: 0;
+	padding: 0 1em;
+	text-transform: uppercase;
+	background: #efe778;
+	color: #222;
+}*/
 .store strong {
 	text-align: center;
 	font-size: 1.4rem;
@@ -623,14 +648,15 @@ img.cart {
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
+	padding: 0 1rem;
 }
 .store-item-actions label {
-	margin: 0 1rem 0;
+	margin: 0 .4rem 0 0;
 }
 .store-item-actions input[type="number"], .shirts-item input[type="number"], .shirts-item select {
 	width: 50px;
-	margin: .5rem 1rem .7rem;
-	font-size: 1.2rem;
+	margin: .5rem .2rem .7rem;
+	font-size: 1rem;
 	background-color: rgba(0,0,0, .1);
 	border: transparent;
 	border-bottom: 2px solid #3a414c;
@@ -642,7 +668,7 @@ img.cart {
 .shirts-item select {
 	width: auto;
 }
-.store-item-actions button::before {
+.store-item-actions button::before, .nice-number button::before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -653,14 +679,14 @@ img.cart {
 	border-radius: 23px;
 	padding: 2px;
 }
-.store-item-actions button {
+.store-item-actions button, .nice-number button {
 	color: #e9ca52;
 	background-color: #3a414c;
 	border: transparent;
 	position: relative;
 	font-size: 1.2rem;
 	flex: 1;
-	margin-top: .5rem;
+	margin: .8rem .4rem;
 	flex-basis: 40%;
 }
 .store-item-actions button:hover {
@@ -668,6 +694,26 @@ img.cart {
 }
 .store-item-actions button:hover::before {
 	border: 2px #5a6576 dashed;
+}
+.nice-number {
+	display: inline-block;
+}
+.nice-number input {
+  vertical-align: middle;
+  -moz-appearance: textfield;
+  box-sizing: content-box;
+  margin: 0;
+  text-align: center;
+}
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.nice-number button {
+	padding: 0;
+	height: 30px;
+	width: 30px;
 }
 .lnr {
 	margin: 1rem auto;

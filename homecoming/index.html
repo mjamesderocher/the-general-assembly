@@ -399,6 +399,7 @@
 		<script src="../_scripts/app.js"></script>
 		<script src="../_scripts/jquery-accessible-modal-window-aria.js"></script>
 		<script src="../_scripts/jquery.toast.min.js"></script>
+		<script src="../_scripts/jquery.nice-number.min.js"></script>
 		<script>
 			function loader(e) {
 				$(e).addClass("loading");
@@ -422,7 +423,8 @@
 				var qty = $("ul").find("[data-for='" + item.id + "']");
 				var button = $("ul").find("[data-item-id='" + item.id + "']");
 				if (item.id == "005") {
-					$("#shirts-list").replaceWith('<ul id="shirts-list">' + shirtItem + '</ul>')
+					$("#shirts-list").replaceWith('<ul id="shirts-list">' + shirtItem + '</ul>');
+					$('input[type="number"]').not(".nice-number input").niceNumber();
 				} else if (qty.length !== 0) {
 					qty[0].value = 1;
 				}
@@ -436,8 +438,10 @@
 				$(button).removeClass("loading");
 			});
 			$(document).ready(function(){
+				$('input[type="number"]').niceNumber();
 				$("#shirts-button-increment").click(function(){
 					$("#shirts-list").append(shirtItem);
+					$('input[type="number"]').not(".nice-number input").niceNumber();
 				});
 				$("#shirts-button-add-to-cart").click(function(a){
 					console.log(a)
