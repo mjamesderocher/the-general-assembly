@@ -373,6 +373,18 @@
 							</ul>
 							<button id="shirts-button-increment"><svg class="lnr lnr-plus-circle"><use xlink:href="#lnr-plus-circle"></use></svg> Add another shirt</button>
 							<div class="store-item-actions">
+								<button
+									style="display: none;"
+									class="snipcart-add-item"
+									data-item-id="005"
+									data-item-name="T-Shirt"
+									data-item-price="15.00"
+									data-item-custom1-name="Size"
+									data-item-custom1-options="Small|Medium|Large|X-Large|2X-Large[+2.00]|3X-Large[+2.00]|4X-Large[+2.00]"
+									data-item-url="https://yale.cofb.us/homecoming/"
+								>
+									<p class="store-button-text">Add to Cart</p>
+								</button>
 								<button id="shirts-button-add-to-cart" data-item-id="005">
 									<div style="color: #e9ca52" class="la-line-scale la-sm">
 										<div></div>
@@ -414,9 +426,9 @@
 						<option value="Medium">Medium</option>
 						<option value="Large">Large</option>
 						<option value="X-Large">X-Large</option>
-						<option value="2X-Large">2X (+ $2.00)</option>
-						<option value="3X-Large">3X (+ $2.00)</option>
-						<option value="4X-Large">4X (+ $2.00)</option>
+						<option value="2X-Large[+2.00]">2X (+ $2.00)</option>
+						<option value="3X-Large[+2.00]">3X (+ $2.00)</option>
+						<option value="4X-Large[+2.00]">4X (+ $2.00)</option>
 					</select>
 				</li>`
 			Snipcart.subscribe('item.added', function (item) {
@@ -454,7 +466,7 @@
 							"id": "005",
 							"name": "T-Shirt",
 							"description": "",
-							"url": "https://yale.cofb.us/homecoming",
+							"url": "https://yale.cofb.us/homecoming/",
 							"price": "15.00",
 							"quantity": qty[0].value,
 							"stackable": true,
