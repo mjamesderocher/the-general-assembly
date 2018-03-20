@@ -547,7 +547,10 @@ textarea {
 .snip-layout .snip-header__continue {
 	display: block;
 }
-/*.snip-btn--right:first-of-type {
+div[data-for="company"] {
+	display: none;
+}
+.snip-btn--right:first-of-type {
 	position: relative;
 }
 .snip-btn--right:first-of-type::before {
@@ -564,11 +567,15 @@ textarea {
 	height: 36px;
 	line-height: 36px;
 	outline: 0;
-	padding: 0 1em;
 	text-transform: uppercase;
 	background: #efe778;
 	color: #222;
-}*/
+	left: 0;
+	text-align: center;
+}
+.snip-btn--right:first-of-type:hover::before {
+	background-color: #eadf4a;
+}
 .store strong {
 	text-align: center;
 	font-size: 1.4rem;
