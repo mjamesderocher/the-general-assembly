@@ -426,9 +426,9 @@
 						<option value="Medium">Medium</option>
 						<option value="Large">Large</option>
 						<option value="X-Large">X-Large</option>
-						<option value="2X-Large[+2.00]">2X (+ $2.00)</option>
-						<option value="3X-Large[+2.00]">3X (+ $2.00)</option>
-						<option value="4X-Large[+2.00]">4X (+ $2.00)</option>
+						<option value="2X-Large">2X (+ $2.00)</option>
+						<option value="3X-Large">3X (+ $2.00)</option>
+						<option value="4X-Large">4X (+ $2.00)</option>
 					</select>
 				</li>`
 			Snipcart.subscribe('item.added', function (item) {
@@ -456,7 +456,6 @@
 					$('input[type="number"]').not(".nice-number input").niceNumber();
 				});
 				$("#shirts-button-add-to-cart").click(function(a){
-					console.log(a)
 					loader(a.currentTarget);
 					var shirtsOrder = [];
 					$(".shirts-item").each(function(index, element) {
@@ -479,6 +478,7 @@
 							}]
 						})
 					});
+					console.log(shirtsOrder);
 					Snipcart.api.items.add(shirtsOrder);
 				});
 			});
