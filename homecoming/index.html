@@ -117,7 +117,7 @@
 							</div>
 						</li>
 						<li>
-							<h3>Child Ticket (Age 10 and under)</h3>
+							<h3>Child Ticket (Ages 3 through 10<a href="#note">*</a>)</h3>
 							<svg class="lnr lnr-tag"><use xlink:href="#lnr-tag"></use></svg>
 							<p class="price">$10.00</p>
 							<div class="store-item-actions">
@@ -354,7 +354,7 @@
 						</li>
 						<li style="grid-row: span 2;">
 							<h3>T-Shirt</h3>
-							<svg class="lnr lnr-shirt"><use xlink:href="#lnr-shirt"></use></svg>
+							<img src="../_images/homecoming/shirt.jpg" alt="Grey T-Shirt with text that says 'A Firstborn Homecoming - Music for the soul.'" >
 							<p class="price">$15.00</p>
 							<ul id="shirts-list">
 								<li class="shirts-item">
@@ -397,9 +397,12 @@
 								</button>
 							</div>
 						</li>
+						<li style="border: transparent;">
+							<p><strong>All orders need to be submitted by May 14th so that they may be picked up at the event.</strong></p>
+							<p id="note">Children 2 years old and under are free.</p>
+						</li>
 					</ul>
 				</div>
-				<p><strong>All orders need to be submitted by May 14th so that they may be picked up at the event.</strong></p>
 			</div>
 			<div id="panel3" class="panel" aria-labelledby="tab3" role="tabpanel">
 				<h2>Directions</h2>
@@ -479,7 +482,6 @@
 							}]
 						})
 					});
-					console.log(shirtsOrder);
 					Snipcart.api.items.add(shirtsOrder);
 				});
 			});

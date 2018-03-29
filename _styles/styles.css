@@ -534,7 +534,7 @@ textarea {
 	top: 0;
 	background: linear-gradient( rgba(233, 202, 82, .95), rgba(233, 202, 82, .95) );
 	border-bottom: #3a414c 2px solid;
-	z-index: 1;
+	z-index: 5;
 	margin: -1rem -2rem 2rem;
 	padding: 1rem 2rem;
 }
@@ -618,6 +618,7 @@ img.cart {
 	border-top: transparent !important;
 	border-bottom: transparent !important;
 	margin-top: 1rem;
+	z-index: 1;
 }
 .store h3:before {
 	content: "";
@@ -631,6 +632,11 @@ img.cart {
 	border-bottom: 2px solid #3a414c;
 	padding-top: 2px;
 	padding-bottom: 2px;
+	z-index: -1;
+}
+.store h3 a {
+	color: #e9ca52 !important;
+	box-shadow: none !important;
 }
 .store-items {
 	padding: 0;
