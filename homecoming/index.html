@@ -374,7 +374,7 @@
 						</li>
 						<li style="grid-row: span 2;">
 							<h3>T-Shirt</h3>
-							<img src="../_images/homecoming/shirt.jpg" alt="Grey T-Shirt with text that says 'A Firstborn Homecoming - Music for the soul.'" >
+							<img style="height: 100%;" src="../_images/homecoming/shirt.jpg" alt="Grey T-Shirt with text that says 'A Firstborn Homecoming - Music for the soul.'" >
 							<p class="price">$15.00</p>
 							<ul id="shirts-list">
 								<li class="shirts-item">
@@ -442,19 +442,7 @@
 			}
 			Snipcart.execute('config', 'show_continue_shopping', true);
 			Snipcart.api.configure('show_cart_automatically', false);
-			var shirtItem = `<li class="shirts-item">
-					<input type="number" min="0" value="1" />
-					<select>
-						<option value="" disabled selected>Select Size</option>
-						<option value="Small">Small</option>
-						<option value="Medium">Medium</option>
-						<option value="Large">Large</option>
-						<option value="X-Large">X-Large</option>
-						<option value="2X-Large">2X (+ $2.00)</option>
-						<option value="3X-Large">3X (+ $2.00)</option>
-						<option value="4X-Large">4X (+ $2.00)</option>
-					</select>
-				</li>`
+			var shirtItem = '<li class="shirts-item"><input type="number" min="0" value="1" /><select><option value="" disabled selected>Select Size</option><option value="Small">Small</option><option value="Medium">Medium</option><option value="Large">Large</option><option value="X-Large">X-Large</option><option value="2X-Large">2X (+ $2.00)</option><option value="3X-Large">3X (+ $2.00)</option><option value="4X-Large">4X (+ $2.00)</option></select></li>'
 			Snipcart.subscribe('item.added', function (item) {
 				var qty = $("ul").find("[data-for='" + item.id + "']");
 				var button = $("ul").find("[data-item-id='" + item.id + "']");

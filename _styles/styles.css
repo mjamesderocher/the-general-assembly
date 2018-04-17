@@ -540,6 +540,7 @@ textarea {
 }
 .snipcart-summary {
 	display: flex;
+	align-items: center;
 }
 .snipcart-summary > * + * {
 	padding-left: .5rem;
@@ -642,19 +643,29 @@ img.cart {
 	padding: 0;
 	list-style: none;
 	display: flex;
-  justify-content: space-between;
+	justify-content: space-between;
+	align-items: flex-start;
 	flex-wrap: wrap;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-	grid-gap: 40px;
 }
 .store-items > li {
-	flex: 1;
+	flex: 0 1 22%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	text-align: center;
 	border: 2px solid #3a414c;
+	margin-bottom: 1rem;
+}
+@supports (display: grid) {
+  .store-items {
+    display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+		grid-gap: 40px;
+		align-items: stretch;
+	}
+	.store-items > li {
+		margin-bottom: 0;
+	}
 }
 .store-item-actions {
 	display: flex;
