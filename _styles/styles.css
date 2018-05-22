@@ -656,6 +656,26 @@ img.cart {
 	border: 2px solid #3a414c;
 	margin-bottom: 1rem;
 }
+.store-items > li.sold-out {
+	position: relative;
+}
+.store-items > li.sold-out::after {
+	content: "Sold out";
+	position: absolute;
+	/* top: 30%; */
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: #e9ca52;
+	background-color: rgba(0,0,0,.6);
+	font-size: 5rem;
+	line-height: 1;
+	display: flex;
+	align-items: center;
+	z-index: 4;
+	/* display: block; */
+}
+
 @supports (display: grid) {
   .store-items {
     display: grid;
@@ -702,6 +722,12 @@ img.cart {
 	top: -4px;
 	border-radius: 23px;
 	padding: 2px;
+}
+.store-item-actions button:disabled {
+	background-color: #3a414c !important;
+}
+.store-item-actions button:disabled::before {
+	border: 2px #3a414c solid !important;
 }
 .store-item-actions button, .nice-number button {
 	color: #e9ca52;
