@@ -292,6 +292,9 @@ ul.info {
 	max-width: 40rem;
 	margin: 0 auto;
 }
+.mc-field-group {
+	margin: 1rem 0;
+}
 .panel h2 {
 	display: none;
 }
